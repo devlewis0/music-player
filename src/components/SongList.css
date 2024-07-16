@@ -1,0 +1,40 @@
+.song-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+  width: 100%; /* Ensure the song list takes full width */
+}
+
+.song-item {
+  list-style-type: none;
+  padding: 10px;
+  background-color: #3e3e3e;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.song-item:hover {
+  background-color: #575757;
+}
+
+.song-item:active {
+  background-color: #1db954;
+}
+
+@media (max-width: 768px) {
+  .song-list {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .song-item {
+    padding: 8px;
+    width: 100%;
+  }
+}

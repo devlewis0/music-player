@@ -1,0 +1,110 @@
+.music-player {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw; /* Asegúrate de que ocupe todo el ancho */
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  background-color: #1db954;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.upload-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.custom-file-upload,
+.upload-buttons button {
+  background-color: #ffffff;
+  color: #1db954;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-flex; /* Make the label behave like a button */
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none; /* Hide the actual file input */
+}
+
+.custom-file-upload:hover,
+.upload-buttons button:hover {
+  background-color: #1db954;
+  color: #ffffff;
+}
+
+.menu-icon {
+  text-align: right;
+}
+
+.menu-icon i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #121212;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+  max-width: 800px; /* Limit the width */
+  margin: 0 auto; /* Center the main content */
+}
+
+.now-playing,
+.visualizer,
+.song-list {
+  width: 100%;
+  max-width: 600px; /* Limit the width of individual components */
+  margin-bottom: 20px; /* Add some spacing */
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -4px 2px -2px gray;
+  margin-top: auto; /* Ensure the footer is pushed to the bottom */
+}
+
+@media (max-width: 768px) {
+  .music-player {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+    height: auto;
+    max-width: none; /* Remove the max-width on smaller screens */
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
